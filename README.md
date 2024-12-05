@@ -130,7 +130,6 @@ mathapp:
 </html>
 
 views.py:
-
 from django.shortcuts import render
 def powerlamp(request): 
     context={} 
@@ -150,6 +149,7 @@ def powerlamp(request):
         context['r']=r 
         print('Power=',power) 
     return render(request,'mathapp/math.html',context)
+    
 
 urls.py:
 from django.contrib import admin 
