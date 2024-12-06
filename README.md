@@ -35,100 +35,74 @@ Publish the website in the given URL.
 ```
 mathapp:
 <html>
-<head>
-    <title>Math</title>
-    <style>
-        body {
-            background: url('background-image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-
-        h1 {
-            border: 2px solid black;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            position: fixed;
-            top: 200px;
-            right: 500px;
-            font-size: 2.5em;
-            font-weight: bold;
-            font-variant: small-caps;
-            background: linear-gradient(to bottom, rgba(13, 237, 229, 0.9), rgba(208, 189, 21, 0.9));
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-style: italic;
-            color: #ff5733;
-            text-align: center;
-        }
-
-        form {
-            border: 2px solid rgba(20, 202, 234, 0.9);
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            margin: 10px;
-            border-radius: 10px;
-            width: 450px;
-            position: fixed;
-            top: 300px;
-            left: 527px;
-            font-style: oblique;
-            color: #ffff66;
-            font-size: 1.2em;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #218838;
-        }
-    </style>
-</head>
-<body>
-    <h1>Power Calculator</h1>
-    <form align="center" method="POST">
-        {% csrf_token %}
+    <head>
+        <title>math</title>
+<style>
+            
+    h1{
+        border: 2px solid black;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 5px;
+        position: fixed;
+        top: 200px;
+        right: 500px;
+        font-size: xx-large;
+        font-weight: bolder;
+        font-variant: small-caps;
+        background: linear-gradient(to bottom,rgb(13, 24, 237),rgb(59, 236, 39));
+        font-family: cursive;
+        color: crimson;
+        align-self: center;
+    }
+    form{
+        border: 2px solid rgb(20, 202, 234);
+        background-color:gainsboro ;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 10px;
+        width: 425px;
+        position: fixed;
+        top: 300px;
+        left: 527px;
+        font-style: oblique;
+        color:blueviolet;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: left;
+        
+    }
+    
+ </style>
+    </head>
+    <body>
+        <h1 align="center" > power finder</h1>
+        <form align="center" method="POST">
+        {%csrf_token%}
+         
         <div class="power">
-            <label for="INTENSITY"><b>INTENSITY (I):</b></label>
+    
+            <label for="INTENSITY"><b>INTENSITY(I):</b></label>
             <input type="text" name="intensity" id="INTENSITY" placeholder="Enter the Value" value="{{i}}">
         </div>
+        <br>
         <div class="power">
-            <label for="RESISTANCE"><b>RESISTANCE (Ohms):</b></label>
+            <label for="RESISTANCE"><b>RESISTANCE(Ohms):</b></label>
             <input type="text" name="resistance" id="RESISTANCE" placeholder="Enter the Value" value="{{r}}">
         </div>
+        <br>
         <input type="submit" value="CALCULATE">
+        <br>
+        <br>
         <div class="power">
-            <label for="POWER"><b>POWER (in Watts):</b></label>
+            <label for="POWER"><b>POWER(in Watts):</b></label>
             <input type="text" name="POWER" id="POWER" placeholder="Answer" value="{{power}}">
+            
         </div>
     </form>
-</body>
-</html>
-
+    </body>
+    </html>
+    
 views.py:
 
 from django.shortcuts import render
@@ -165,7 +139,7 @@ urlpatterns = [
 ![image](https://github.com/user-attachments/assets/d91d2d46-383f-456a-8463-cc44d7d32640)
 
 ## HOMEPAGE:
-![Screenshot 2024-12-05 225002](https://github.com/user-attachments/assets/a958dc37-19eb-4e6f-b30e-8492cf182d8c)
+![image](https://github.com/user-attachments/assets/5fee98d9-507c-4bcf-9a31-d2cc35bbb85b)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
