@@ -32,7 +32,7 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
-'''
+```
 mathapp:
 <html>
 <head>
@@ -130,6 +130,7 @@ mathapp:
 </html>
 
 views.py:
+
 from django.shortcuts import render
 def powerlamp(request): 
     context={} 
@@ -149,7 +150,6 @@ def powerlamp(request):
         context['r']=r 
         print('Power=',power) 
     return render(request,'mathapp/math.html',context)
-    
 
 urls.py:
 from django.contrib import admin 
@@ -160,11 +160,9 @@ urlpatterns = [
     path('powerlamp/',views.powerlamp,name="powerlamp"),
     path('',views.powerlamp,name="powerlamproot")
 ]
-'''
-
-
+```
 ## SERVER SIDE PROCESSING:
-![image](https://github.com/user-attachments/assets/49e7e91f-3afc-46f6-b7ed-94031ed061f9)
+![image](https://github.com/user-attachments/assets/d91d2d46-383f-456a-8463-cc44d7d32640)
 
 ## HOMEPAGE:
 ![Screenshot 2024-12-05 225002](https://github.com/user-attachments/assets/a958dc37-19eb-4e6f-b30e-8492cf182d8c)
